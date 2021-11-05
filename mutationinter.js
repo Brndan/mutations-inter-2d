@@ -15,7 +15,7 @@ function calculmutation() {
     const pt_echelon_hc_certifies_forfait = 56;
     const pt_echelon_hc_agreges_forfait = 63;
     const pt_echelon_exceptionnel_forfait = 77 ;
-    const pt_echelon_max = 98;
+    const pt_echelon_max = 105;
     // situation familiale
     const pt_situation_familiale_rapprochement_conjoint = 150.2;
     const pt_situation_familiale_annees_de_separation = {0  : 0,
