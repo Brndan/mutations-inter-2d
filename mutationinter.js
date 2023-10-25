@@ -60,7 +60,8 @@ function calculmutation() {
         "none": 0,
         "rep+": 400,
         "rep": 200,
-        "plv": 400
+        "plv": 400,
+        "cla": 120
     };
     const pt_situation_personnelle_affectation_mayotte_guyane = 100;
     const pt_situation_personnelle_situation_medicale = {
@@ -81,6 +82,8 @@ function calculmutation() {
         "3edemande": 1000
     };
     const pt_voeux_voeu_DOM_mayotte = 1000;
+    const guyane = 200;
+    const mayotte = 1000;
 
     // --------   récupération de valeurs clés ---------
     // Récupération des valeurs de la partie communune
@@ -245,6 +248,17 @@ function calculmutation() {
             ct_voeu = "ATTENTION: Vœu préférentiel non pris en compte car non cumulable avec la bonification Sportif haut niveau ATP qui a été gardée car plus intéressante.";
         }
 
+    }
+
+
+   // Guyane
+    if (document.getElementById("guyane").checked) {
+        pt_voeu += guyane;
+    }
+    
+    // Mayotte
+    if (document.getElementById("mayotte").checked) {
+        pt_voeu += mayotte;
     }
 
     // pt_total = pt_partie_commune (1) + pt_situation_familiale (2) + pt_situation_personnelle (3) + pt_voeu (4) AVEC REGLES DE NON CUMUL
