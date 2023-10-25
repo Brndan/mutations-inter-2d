@@ -38,7 +38,7 @@
       <label for="menu_anciennete_poste">
          Sélectionnez votre ancienneté:
          <div class="tooltip">ℹ️<div class="tooltiptext">
-               Votre ancienneté en années au 31/08/2022, dans le poste actuel ou dans le dernier occupé si
+               Votre ancienneté en années au 31/08/2024, dans le poste actuel ou dans le dernier occupé si
                disponibilité, congé, ATP, ou si vous êtes stagiaire précédemment titulaire d’un autre corps de personnel
                enseignant, d’éducation et d’orientation.
             </div>
@@ -107,7 +107,7 @@
    <div class="blocSelection" id="menu_echelon">
       <label for="menu_echelon">Sélectionnez votre échelon :
          <div class="tooltip">ℹ️<div class="tooltiptext">
-               Echelon au 31/08/2022 (au 01/09/2022 si entrée dans le métier et reclassement).
+               Echelon au 31/08/2023 (au 01/09/2023 si entrée dans le métier et reclassement).
             </div>
          </div>
       </label>
@@ -279,9 +279,9 @@
    </div>
 
    <div class="blocSelection" id="menu_education_prioritaire">
-      <label for="menu_education_prioritaire">Affectation Education prioritaire :
+      <label for="menu_education_prioritaire">Affectation Education prioritaire, politique de la ville, contrat local d'accompagnement (CLA) :
          <div class="tooltip">ℹ️<div class="tooltiptext">
-               Affectation en éducation prioritaire: ancienneté au 31 août 2022.
+               Affectation en éducation prioritaire: ancienneté au 31 août 2024.
             </div>
          </div>
       </label>
@@ -291,6 +291,7 @@
             <option value="rep+">REP+ 5 ans et +</option>
             <option value="rep">REP 5 ans et +</option>
             <option value="plv">Politique de la ville 5 ans et +</option>
+            <option value="cla">CLA depuis 3 ans et +</option>
          </select>
       </div>
    </div>
@@ -402,7 +403,23 @@
          </div>
       </div>
    </div>
-
+     <div class="blocSelection" id="menu_voeu_guyane">
+      <input type="checkbox" id="guyane">
+      <label for="guyane">Bonification spécifique Guyane</label>
+      <div class="tooltip">ℹ️<div class="tooltiptext">
+            Sous condition d'avoir muté en Guyane, d'être en poste en Guyane depuis au moins 5 ans et d'exercer de
+            manière effective et continue depuis deux ans sur un poste isolé<br>
+         </div>
+      </div>
+   </div>
+   <div class="blocSelection" id="menu_voeu_mayotte">
+      <input type="checkbox" id="mayotte">
+      <label for="mayotte">Bonification spécifique Mayotte</label>
+      <div class="tooltip">ℹ️<div class="tooltiptext">
+         Avoir muté à Mayotte et exercer de manière effective et continue depuis 5 ans sur le territoire de Mayotte
+         </div>
+      </div>
+   </div>
    <div class="boutonCalcul" id="calcul">
       <input type="button" value="Calculer" onclick="calculmutation();" />
    </div>
