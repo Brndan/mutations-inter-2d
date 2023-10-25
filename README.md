@@ -1,6 +1,6 @@
-# Calculateur mutations interacadémiques 2023
+# Calculateur mutations interacadémiques 2024
 
-Code javascript et formulaire pour calcul des barèmes des personnels enseignants mutations interacadémiques second degré en 2022.
+Code javascript et formulaire pour calcul des barèmes des personnels enseignants mutations interacadémiques second degré en 2023.
 
 
 
