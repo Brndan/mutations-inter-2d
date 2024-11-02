@@ -104,7 +104,7 @@ function calculmutation() {
     let contractuel_actif_avant_stage = document.getElementById('contractuel_actif_avant_stage').checked;
     let academie_ex_corps = document.getElementById('academie_ex_corps').checked;
     let reintegration = document.getElementById('reintegration').checked;
-    let affection_mayotte_guyane = document.getElementById('affection_mayotte_guyane').checked;
+    //let affection_mayotte_guyane = document.getElementById('affection_mayotte_guyane').checked;
     let education_prioritaire = document.getElementById('education_prioritaire').value;
     let situation_medicale = document.getElementById('situation_medicale').value;
     let sportif_affecte_ATP = document.getElementById('sportif_affecte_ATP').value;
@@ -199,15 +199,15 @@ function calculmutation() {
         pt_situation_personnelle = pt_situation_personnelle + academie_ex_corps * pt_situation_personnelle_stagiaire_ex_autre_corps;
     };
     pt_situation_personnelle = pt_situation_personnelle + reintegration * pt_situation_personnelle_reintegration;
-    if (affection_mayotte_guyane) {
-        pt_situation_personnelle = pt_situation_personnelle + affection_mayotte_guyane;
-        if (ct_situation_personnelle.length > 2) {
-            ct_situation_personnelle = ct_situation_personnelle + "</br>"
-        } else {
-            ""
-        }
-        ct_situation_personnelle = ct_situation_personnelle + "Agents affectés à Mayotte ou en Guyane : 100 pts sur tous les vœux dès 5 ans d’exercice."
-    }
+    //if (affection_mayotte_guyane) {
+    //    pt_situation_personnelle = pt_situation_personnelle + affection_mayotte_guyane;
+    //    if (ct_situation_personnelle.length > 2) {
+    //        ct_situation_personnelle = ct_situation_personnelle + "</br>"
+    //    } else {
+    //        ""
+    //    }
+    //    ct_situation_personnelle = ct_situation_personnelle + "Agents affectés à Mayotte ou en Guyane : 100 pts sur tous les vœux dès 5 ans d’exercice."
+    //}
     pt_situation_personnelle = pt_situation_personnelle + pt_situation_personnelle_affectation_education_prioritaire[education_prioritaire];
     pt_situation_personnelle = pt_situation_personnelle + pt_situation_personnelle_situation_medicale[situation_medicale];
     let pt_situation_personnelle_ATP = Math.min(sportif_affecte_ATP, pt_situation_personnelle_ATP_nb_max_annee) * pt_situation_personnelle_ATP_par_annee;
