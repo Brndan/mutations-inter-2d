@@ -63,7 +63,8 @@ function calculmutation() {
         "plv": 400,
         "cla": 120
     };
-    const pt_situation_personnelle_affectation_mayotte_guyane = 100;
+    const pt_poste_profil = 27;
+    //const pt_situation_personnelle_affectation_mayotte_guyane = 100;
     const pt_situation_personnelle_situation_medicale = {
         "none": 0,
         "amelioration_situation_handicap": 1000,
@@ -82,7 +83,8 @@ function calculmutation() {
         "3edemande": 1000
     };
     const pt_voeux_voeu_DOM_mayotte = 1000;
-    const guyane = 200;
+    const guyane = 100;
+    const guyane_isole = 200;
     const mayotte = 1000;
 
     // --------   récupération de valeurs clés ---------
@@ -162,7 +164,7 @@ function calculmutation() {
                 + enfants_a_charge * pt_situation_familiale_par_enfants_a_charge
                 + pt_situation_familiale_annees_de_separation[annees_de_separation]
                 + pt_situation_familiale_residences_professionnelles[residences_professionnelles];
-            ct_situation_familiale = "Rapprochement de conjoints (si pacs/mariage avant le 31 août 2021 ou certificat de grossesse et reconnaissance anticipée avant le 31 décembre 2019) : 150,2 pts pour l’académie de résidence professionnelle du conjoint (1er vœu) et les académies limitrophes. Le conjoint doit avoir une activité professionnelle ou fournir, en cas de chômage, une attestation récente d’inscription à Pôle emploi et de joindre une attestation que la dernière activité professionnelle date d’après le 31 août 2017. ATTENTION : pour bénéficier d’un rapprochement de conjoint lors du mouvement intra, vous devez l’avoir demandé lors du mouvement inter.";
+            ct_situation_familiale = "Rapprochement de conjoints (si pacs/mariage avant le 31 août 2024 ou certificat de grossesse et reconnaissance anticipée avant le 31 décembre 2025) : 150,2 pts pour l’académie de résidence professionnelle du conjoint (1er vœu) et les académies limitrophes. Le conjoint doit avoir une activité professionnelle ou fournir, en cas de chômage, une attestation récente d’inscription à France travail et de joindre une attestation que la dernière activité professionnelle date d’après le 31 août 2024. ATTENTION : pour bénéficier d’un rapprochement de conjoint lors du mouvement intra, vous devez l’avoir demandé lors du mouvement inter.";
             break;
         case "autorite_parentale_conjointe":
             pt_situation_familiale = pt_situation_familiale_autorite_parentale_conjointe
@@ -198,7 +200,7 @@ function calculmutation() {
     };
     pt_situation_personnelle = pt_situation_personnelle + reintegration * pt_situation_personnelle_reintegration;
     if (affection_mayotte_guyane) {
-        pt_situation_personnelle = pt_situation_personnelle + affection_mayotte_guyane * pt_situation_personnelle_affectation_mayotte_guyane;
+        pt_situation_personnelle = pt_situation_personnelle + affection_mayotte_guyane;
         if (ct_situation_personnelle.length > 2) {
             ct_situation_personnelle = ct_situation_personnelle + "</br>"
         } else {
@@ -254,6 +256,8 @@ function calculmutation() {
    // Guyane
     if (document.getElementById("guyane").checked) {
         pt_voeu += guyane;
+    } else if (document.getElementById("guyane_isole").checked) {
+        pt_voeu += guyane_isole;
     }
     
     // Mayotte
