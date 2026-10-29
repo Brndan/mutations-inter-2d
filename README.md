@@ -1,6 +1,6 @@
-# Calculateur mutations interacadémiques 2024
+# Calculateur mutations interacadémiques
 
-Code javascript et formulaire pour calcul des barèmes des personnels enseignants mutations interacadémiques second degré pour les mutations effectives à la rentrée 2025 (vœux formulés en novembre 2024).
+Code javascript et formulaire pour calcul des barèmes des personnels enseignants mutations interacadémiques second degré pour les mutations effectives à la rentrée prochaine (vœux formulés en novembre).
 
 
 
